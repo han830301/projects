@@ -30,48 +30,61 @@
     </style>
 </head>
 <body>
-    <section class="bg-secondary sec1">
-        <div class="text-end me-2 align-self-center">
-            <a href="#" class="text-dark text-decoration-none">
-            <i class="fa-solid fa-earth-asia me-2 text-dark"></i><small>Find Your Country</small></a>
-        </div>
-    </section>
-    <section>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top">
-            <div class="container-fluid align">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                     <div class="col-md-2">
-                        <ul class="navbar-nav mb-2 mb-lg-0 flex-row-reverse">
-                            <li class="nav-item">
-                                <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
-                             </li>
-                        </ul> 
-                    </div>             
-                </div>
+    <header>
+        <nav role="navigation">
+            <div id="menuToggle">
+            <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">商品分類</a></li>
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-        </nav>  
-    </section>
-    <section>
+      </nav>
+    </header>
+    <!-- <section>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <a href="#"><div class="carousel-item active bg-cover" style="background-image: url(./images/SRT04.png); height: 100vh;"></div></a>
-              <div class="carousel-item bg-cover" style="background-image: url(./images/SRT01.avif); height: 100vh;"></div>
-              <div class="carousel-item bg-cover" style="background-image: url(./images/SRT05.png); height: 100vh;"></div>
+              <a href=""><div class="carousel-item bg-cover" style="background-image: url(./images/SRT01.avif); height: 100vh;"></div></a>
+              <a href=""><div class="carousel-item bg-cover" style="background-image: url(./images/SRT05.png); height: 100vh;"></div></a>
             </div>
           </div>
-    </section>
-    <section>
-        
-    </section>
+    </section> -->
+    <!-- <section class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-2 ul-m">
+                    <ul class="list-unstyled">
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">會員資訊</a></li>
+                        <li><a href="#">客服資訊</a></li>
+                        <li><a href="#">常見問題</a></li>
+                    </ul>
+                </div>
+                <div class="col-2 ul-m">
+                    <ul class="list-unstyled">
+                        <li><a href="#">付款資訊</a></li>
+                        <li><a href="#">退換說明</a></li>
+                        <li><a href="#">售後服務</a></li>
+                        <li><a href="#">配送相關</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">       
+                </div>
+            </div>
+        </div>
+    </section> -->
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/jquery-3.6.4.min.js"></script>
-    <script>
-        $(function(){
-            $('.carousel').carousel({
-                Interval:1000
-            });
-        })
-    </script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
