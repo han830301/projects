@@ -33,17 +33,6 @@
     margin: 0;
     padding: 0;
 }
-
-.bg-cover{
-    background-position: center;
-    background-size: cover;
-}
-
-.bg-cover01{
-    background-position-y: bottom;
-    background-size: cover;
-}
-
 @media screen and (max-width: 768px) {
     .table-rwd thead{
         display: none;           

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第11章-表單</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mycss.css">
+    <style>
+        .demo {
+            border: 2px solid var(--mycolor006);
+            border-radius: 5px;
+            background-color: rgba(245, 208, 44, 0.26)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 1. 文字輸入(按鈕監聽練習01) -->
+            <div class="col-md-10 offset-1">
+                <div class="demo">
+                    <div class="fs-2">1. 文字輸入(按鈕監聽練習01)</div>
+                    <div class="mb-3">
+                        <label for="username">帳號</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nickname">暱稱</label>
+                        <input type="text" class="form-control" id="nickname" name="nickname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="age">年齡</label>
+                        <input type="number" class="form-control" id="age" name="age" min="1" value="12">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-secondary" id="cancel_btn01">取消</button>
+                        <button class="btn btn-primary" id="btn01">確認</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 2. 文字輸入排版() -->
+            <div class="col-md-10 offset-1">
+                <div class="demo">
+                    <div class="fs-2">2. 文字輸入排版(align-items-center 與form-text 可以讓文字垂直置中)</div>
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <label for="username02" class="form-label">帳號</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="username02" name="username02">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-auto">
+                            <label for="nickname02" class="form-label">暱稱</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" id="nickname02" name="nickname02">
+                        </div>
+                        <div class="col-auto">
+                            <div class="form-text text-danger">不會記錄任何資訊!</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <button class="btn btn-secondary" id="canael_btn02">取消</button>
+                        <button class="btn btn-primary" id="btn02">確認</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.4.min.js"></script>
+    <script>
+        $(function () {
+            //btn01 確認按鈕 監聽事件
+            $("#btn01").click(function () {
+                // console.log("test01");
+                console.log($("#username").val()+$("#nickname").val());
+            });
+
+            //cancel_btn01 取消按鈕 監聽事件
+            $("#cancel_btn01").click(function () {
+                $("#username").val("");
+                $("#nickname").val("");
+            });
+            
+            //btn02 確認按鈕 監聽事件
+            $("#btn02").click(function(){
+                console.log($("#username02").val() + $("#nickname02").val());
+            });
+
+            //cancel_btn02 取消按鈕 監聽事件
+            $("#canael_btn02").click(function(){
+                $("#username02").val("");
+                $("#nickname02").val("");
+            });
+
+        });
+    </script>
+</body>
+
+</html>
