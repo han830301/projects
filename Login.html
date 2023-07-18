@@ -75,12 +75,13 @@
                 <h2 class="mt-5 text-center">會員登入</h2>
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="col-md-8 d-flex align-items-center justify-content-center mt-3">     
-                        <div class="col-md-2">
-                            <input type="username" class="form-control" id="email" placeholder="註冊時電子郵件">
+                        <div class="col-md-3">
+                            <input type="username" class="form-control" id="email" name="email" placeholder="註冊時電子郵件">
+                            <div class="err_email mt-2 ms-2"></div>
                         </div>
                     </div>
-                    <div class="col-md-8 d-flex align-items-center justify-content-center  mt-4">     
-                        <div class="col-md-2">
+                    <div class="col-md-8 d-flex align-items-center justify-content-center  mt-3">     
+                        <div class="col-md-3">
                             <input type="password" class="form-control" placeholder="密碼">
                         </div>
                     </div>
@@ -163,6 +164,26 @@
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/jquery-3.6.4.min.js"></script>
 <script>
+    var flag_email = false;
+
+    $(function(){
+        $("#email").bind("input propertychange", function(){
+                if($(this).val().length > 7 && $(this).val().length < 20){
+                    //合法
+                    $(this).removeClass("is-invalid");
+                    $(this).addClass("is-valid");
+                    flag_email = true;
+                }
+                else{
+                    //不合法
+                    $(this).removeClass("is-valid");
+                    $(this).addClass("is-invalid");
+                    $(".err_email").html("請輸入正確電子郵件地址!");
+                    $(".err_email").css("color"," red");
+                    flag_email = false;
+                }
+            })
+    })
 </script>
 </body>
 </html>
